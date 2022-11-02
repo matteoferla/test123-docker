@@ -1,5 +1,6 @@
 FROM debian
-RUN apt-get sudo
+RUN apt update -y && apt upgrade -y
+RUN apt install sudo -y
 RUN useradd debian -d /home/node -s /bin/bash -m
 USER debian
 ENV HOME /home/debian
@@ -8,4 +9,5 @@ ENV USER debian
 # scratch directory become the mounted volume
 VOLUME scratch
 
+#EXPOSE 22/tcp
 #EXPOSE  6666
