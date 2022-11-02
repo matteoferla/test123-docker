@@ -1,5 +1,3 @@
-# https://htcondor.readthedocs.io/en/latest/users-manual/docker-universe-applications.html
-
 universe                = docker
 docker_image            = matteoferla/test123
 executable              = ./write_test.sh

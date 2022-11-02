@@ -2,7 +2,7 @@
 
 I am trying to test a simple docker image for a non-updated HTCondor cluster wherein I am not in the docker usergroup and all that issue.
 
-There's something funky going on... so I am adding a layer at the time
+Docker universe: https://htcondor.readthedocs.io/en/latest/users-manual/docker-universe-applications.html
 
 ## HTCondor to Dockerfile
 The command to run docker is `docker run [OPTIONS] IMAGE [COMMAND] [ARG...]`.
@@ -17,3 +17,8 @@ with arguments `arguments`.
 
 The problem is `--user` is not available
 and the user running the command I think is guest.
+
+So this kills all plans to use docker universe for HTCondor:
+
+1. I cannot run docker as a user so I have write permissions
+2. I cannot get docker to run a jupyterlab notebook as it not be published to the host
